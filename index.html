@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Mockups</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+  <script src="https://use.fontawesome.com/e88f9ccc5b.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+
+  <nav class="navbar is-primary" role="navigation" aria-label="navigation">
+  <a class="navbar-item">
+    <p class="navTitle title">Reactor</p>
+  </a>
+
+  <div class="navbar-end">
+        <a class="navbar-item is-active">
+          Dashboard
+        </a>
+
+        <a class="navbar-item">
+          Supported Devices
+        </a>
+
+        <a class="navbar-item">
+          Account
+        </a>
+    </div>
+
+</nav>
+
+
+
+
+<div class="sectionWrapper">
+
+  <section id="devices">
+    <div class="sectionTitleBar">
+      <h3 class="title">Devices</h3>
+      <a class="button is-primary" onclick="showAddDeviceModel()">Add Device</a>
+    </div>
+
+    <div class="sectionCardWrapper">
+
+
+
+
+      <div class="card">
+
+        <header class="card-header">
+          <p class="card-header-title">
+            Bedroom Light
+          </p>
+          <p class="card-header-icon" aria-label="more options">
+            <span class="icon has-text-success">
+              <i class="fa fa-check-square"></i>
+            </span>
+          </p>
+        </header>
+
+        <div class="card-content">
+          <div class="content">
+            <p><b>Group:</b> Bedroom</p>
+            <p><b>Status:</b> On</p>
+            <p><b>Hue:</b> Soft White</p>
+
+              
+            
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Settings and Details</a>
+        </footer>
+      </div>
+
+
+
+
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Nest
+          </p>
+          <p class="card-header-icon" aria-label="more options">
+            <span class="icon has-text-success">
+              <i class="fa fa-check-square"></i>
+            </span>
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p><b>Group:</b> None</p>
+            <p><b>Status:</b> Heating
+              <span class="icon has-text-danger">
+                <i class="fa fa-fire"></i>
+              </span>
+            </p>
+            <p><b>Current Tempature:</b> 68&deg;</p>
+            
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Settings and Details</a>
+        </footer>
+      </div>
+
+
+
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Front Door Camera
+          </p>
+          <p class="card-header-icon" aria-label="more options">
+            <span class="icon has-text-warning">
+              <i class="fa fa-exclamation-triangle"></i>
+            </span>
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p><b>Group:</b> 1st Floor</p>
+            <p><b>Status:</b> Unknown Entry</p>
+
+            <br>
+
+            <button class="button is-warning">View Event</button>
+              
+ 
+            
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Settings and Details</a>
+        </footer>
+      </div>
+
+
+
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Bedroom Box Fan
+          </p>
+          <p class="card-header-icon" aria-label="more options">
+            <span class="icon has-text-danger">
+              <i class="fa fa-exclamation-circle"></i>
+            </span>
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p><b>Group:</b> Bedroom</p>
+            <p class="has-text-danger"><b>Status:</b> Lost Connection</p>
+            <p><b>Last Connection: </b>22 Minutes Ago</p>
+            <button class="button is-danger">View Alert</button>
+          
+            
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Settings and Details</a>
+        </footer>
+      </div>
+   
+
+      <div id="deviceModel" class="modal">
+        <div class="modal-background" onclick="closeModel()"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Device Model</p>
+            <button class="delete" aria-label="close" onclick="closeModel()"></button>
+          </header>
+          <section class="modal-card-body">
+
+            <div class="columns deviceColumns">
+              <div class="column is-half">
+
+                <p class="title text-center">Settings</p>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Name</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded">
+                        <input class="input" type="text" value="Nest">
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Group</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field is-narrow">
+                      <div class="control">
+                        <div class="select is-fullwidth">
+                          <select>
+                            <option>None</option>
+                            <option selected="selected">1st Floor</option>
+                            <option>Bedroom</option>
+                            <option> -- New Group -- </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label">
+                    <label class="label">Turned on?</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field is-narrow">
+                      <div class="control">
+                        <label class="radio">
+                          <input type="radio" name="member" checked="checked">
+                          On
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="member">
+                          Off
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Set To</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <input class="input" type="number" value="72">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Notes</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <textarea class="textarea" placeholder="Add a note about the device here">This is a note about the Nest!</textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column is-half">
+
+                <p class="title text-center">Details</p>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Manf.</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded">
+                        <input class="input" type="text" value="Nest Inc" readonly>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Serial Number</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded">
+                        <input class="input" type="text" value="ABC12345" readonly>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Activated</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded">
+                        <input class="input" type="date" value="2017-02-17" readonly>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <label class="label">Owner</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <input class="input" type="text" value="Your Name">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="field is-horizontal">
+                  <div class="field-label is-normal">
+                    <!-- <label class="label">Owner</label> -->
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <button class="button is-danger">Remove From Account</button>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+
+
+                
+              
+            </div>
+            
+
+          
+          
+
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success" onclick="closeModel()">Save changes</button>
+            <button class="button" onclick="closeModel()">Cancel</button>
+          </footer>
+        </div>
+      </div>
+
+      <div id="addDeviceModel" class="modal">
+        <div class="modal-background" onclick="closeModel()"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Add Device</p>
+            <button class="delete" aria-label="close" onclick="closeModel()"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success" onclick="closeModel()">Save changes</button>
+            <button class="button" onclick="closeModel()">Cancel</button>
+          </footer>
+        </div>
+      </div>
+
+
+
+    </div>
+    
+
+    
+
+
+  </section>
+
+  <section id="groups">
+    <div class="sectionTitleBar">
+      <h3 class="title">Groups</h3>
+      <a class="button is-primary" onclick="showAddDeviceModel()">Add Group</a>
+    </div>
+
+    <div class="sectionCardWrapper">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            1st Floor
+          </p>
+          <p class="card-header-icon" aria-label="more options">
+            <span class="icon has-text-warning">
+              <i class="fa fa-exclamation-triangle"></i>
+            </span>
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p><b>Devices:</b> 1 Device</p>
+            <p><b>Events:</b> 1 Event</p>
+
+            <br>
+
+            <button class="button is-warning">View Event</button>
+              
+ 
+            
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Manage Group</a>
+        </footer>
+      </div>
+
+
+
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Front Door Camera
+          </p>
+          <p class="card-header-icon" aria-label="more options">
+            <span class="icon has-text-danger">
+              <i class="fa fa-exclamation-circle"></i>
+            </span>
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p><b>Devices:</b> 2</p>
+            <p><b>Events:</b> 1</p>
+
+            <br>
+
+            <button class="button is-danger">View Alert</button>
+              
+ 
+            
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Manage Group</a>
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+  </section>
+
+  <section id="events">
+    <div class="sectionTitleBar">
+      <h3 class="title">Events</h3>
+    </div>
+
+    <div class="eventWrapper">
+
+      <article class="message is-warning">
+        <div class="message-body">
+          An unknown person was detected entering with <b>Will</b>.
+        </div>
+      </article>
+
+
+      <article class="message is-danger">
+        <div class="message-body">
+          Unable to communicate with <b>Bedroom Box Fan</b>
+        </div>
+      </article>
+
+      <article class="message">
+        <div class="message-body">
+          <b>Monthly Energy Reoprt:</b> You used 23% less energy than last month, nice job!
+        </div>
+      </article>
+
+    </div>
+    
+  </section>
+
+</div>
+
+ 
+
+  
+  
+</body>
+</html>

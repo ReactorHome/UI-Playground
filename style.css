@@ -1,0 +1,144 @@
+html,body{
+	margin:0;
+	padding:0;
+	max-width:100vw;
+	max-height:100%;
+	height:100%;
+}
+
+
+nav{
+	/*border-bottom:thin solid black;*/
+}
+
+.title{
+	font-weight: 200;
+}
+
+.navTitle{
+	font-style: italic;
+    font-weight: 200;
+}
+
+
+.sectionWrapper{
+	position: absolute;
+    top: 52px;
+    bottom: 0;
+
+   	width:100vw;
+
+    min-height:900px;
+    overflow:scroll;
+
+	padding:25px;
+
+	display: flex;
+  	flex-direction: column;
+
+}
+
+.sectionWrapper section{
+	height:40%;
+
+	position:relative;
+}
+
+.sectionWrapper section:last-child{
+	height:20%;
+}
+
+.sectionCardWrapper{
+	display:flex;
+	flex-flow:row;
+	overflow-x: scroll;
+
+
+	position:absolute;
+    top:46px;
+    bottom:0;
+    right: 0;
+    left:0;
+}
+
+.sectionTitleBar{
+	display: flex;
+	flex-flow:row;
+}
+
+.sectionTitleBar .title{
+	margin-bottom: 10px;
+}
+
+.sectionTitleBar .button{
+	margin-left:20px;
+}
+
+
+.card{
+	max-width: 20%;
+	min-width:350px;
+	margin:10px;
+	height:auto;
+}
+
+.card-content{
+	overflow: hidden;
+}
+
+.card-footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.modal-card{
+	width:1000px;
+}
+
+.deviceColumns .column:first{
+	border-right: thin black solid;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.eventWrapper{
+	display:flex;
+	flex-flow:row;
+}
+
+.eventWrapper article:last-child{
+	height:82px;
+
+}
+
+article{
+	margin:0px 5px;
+	max-width: 400px;
+}
+
+article .message-body{
+	/*height:70px;*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
